@@ -1,0 +1,19 @@
+{
+  "name": "@deepo/lib",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "echo 'No dev task for @deepo/lib'",
+    "build": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'No tests in lib yet'",
+    "format": "prettier --check src"
+  },
+  "dependencies": {
+    "idb": "^8.0.3"
+  }
+}
