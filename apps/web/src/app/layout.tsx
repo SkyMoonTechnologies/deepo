@@ -67,7 +67,7 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
-  console.log(goatCounterConfig);
+  globalThis.console.log(goatCounterConfig);
 
   return (
     <html lang="en" suppressHydrationWarning>
