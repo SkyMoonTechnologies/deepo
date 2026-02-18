@@ -12,7 +12,7 @@ RUN bun install --frozen-lockfile
 FROM deps AS builder
 WORKDIR /app
 COPY . .
-RUN bun --filter @deepo/web run build
+RUN bun run --filter @deepo/web build
 
 FROM oven/bun:1.2.22 AS runner
 WORKDIR /app
