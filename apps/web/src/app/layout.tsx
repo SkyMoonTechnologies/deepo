@@ -67,9 +67,11 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  console.log(goatCounterConfig);
+
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className="min-h-screen bg-background text-foreground antialiased">
         {goatCounterConfig ? (
           <Script
             id="goatcounter"
@@ -79,8 +81,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             async
           />
         ) : null}
-      </head>
-      <body className="min-h-screen bg-background text-foreground antialiased">
         <Script src="/sw-register.js" strategy="afterInteractive" />
         <ThemeProvider>
           {children}

@@ -22,9 +22,7 @@ export function resolveGoatCounterConfig(): GoatCounterConfig | null {
     };
   } catch {
     if (process.env.NODE_ENV === 'development') {
-      globalThis.console.warn(
-        'Ignoring invalid GOATCOUNTER_URL: expected a valid http(s) URL.',
-      );
+      globalThis.console.warn('Ignoring invalid GOATCOUNTER_URL: expected a valid http(s) URL.');
     }
     return null;
   }
