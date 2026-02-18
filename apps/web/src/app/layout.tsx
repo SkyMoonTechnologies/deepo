@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import type { ReactNode } from 'react';
 import { Toaster } from '@/components/ui/toaster';
+import { resolveGoatCounterConfig } from '@/lib/goatcounter';
 import { ThemeProvider } from '../components/theme/ThemeProvider';
 
 const DEFAULT_SITE_URL = 'http://localhost:3000';
@@ -19,6 +20,7 @@ function resolveSiteUrl() {
 const siteUrl = resolveSiteUrl();
 const appName = 'Deepo';
 const appDescription = 'Mini Tools Suite for fast developer, design, and operations workflows.';
+const goatCounterConfig = resolveGoatCounterConfig();
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -67,6 +69,17 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {goatCounterConfig ? (
+          <Script
+            id="goatcounter"
+            data-goatcounter={goatCounterConfig.dataGoatCounter}
+            src={goatCounterConfig.scriptSrc}
+            strategy="afterInteractive"
+            async
+          />
+        ) : null}
+      </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <Script src="/sw-register.js" strategy="afterInteractive" />
         <ThemeProvider>
