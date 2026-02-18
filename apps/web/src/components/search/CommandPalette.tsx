@@ -127,8 +127,8 @@ export function CommandPalette() {
     setQuery('');
   }
 
-  function shouldIgnoreShortcutTarget(target: EventTarget | null) {
-    if (!(target instanceof HTMLElement)) {
+  function shouldIgnoreShortcutTarget(target: globalThis.EventTarget | null) {
+    if (!(target instanceof globalThis.HTMLElement)) {
       return false;
     }
 
