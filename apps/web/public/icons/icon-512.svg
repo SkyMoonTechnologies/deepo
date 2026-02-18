@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Deepo icon">
+  <rect width="512" height="512" rx="108" fill="#09090b" />
+  <rect x="62" y="62" width="388" height="388" rx="76" fill="#18181b" />
+  <path d="M154 118h76c85 0 128 38 128 121 0 87-43 131-128 131h-76V118Zm70 196c48 0 74-22 74-73 0-47-26-63-74-63h-10v136h10Z" fill="#fafafa" />
+</svg>

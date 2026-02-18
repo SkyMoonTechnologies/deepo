@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --background: 220 24% 8%;
+  --foreground: 210 20% 98%;
+  --card: 222 22% 12%;
+  --card-foreground: 210 20% 98%;
+  --popover: 222 22% 12%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 210 40% 96%;
+  --primary-foreground: 222 47% 11%;
+  --secondary: 222 18% 18%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 223 16% 16%;
+  --muted-foreground: 217 10% 70%;
+  --accent: 210 38% 22%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 217 14% 24%;
+  --input: 217 14% 24%;
+  --ring: 215 27% 84%;
+  --radius: 0.85rem;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(1200px 500px at 100% -10%, rgba(82, 136, 255, 0.18), transparent),
+    radial-gradient(900px 400px at 0% -20%, rgba(108, 85, 240, 0.12), transparent),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  a {
+    @apply outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+}
