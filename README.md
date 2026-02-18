@@ -22,6 +22,6 @@ Bun workspaces monorepo for the Mini Tools Suite.
 
 ### GoatCounter
 
-- Disabled by default. If `NEXT_PUBLIC_GOATCOUNTER_URL` is unset, empty, or invalid, no GoatCounter script is injected.
-- To enable, set `NEXT_PUBLIC_GOATCOUNTER_URL` to your endpoint, for example: `https://stats.example.com/count`
+- Disabled by default. If `GOATCOUNTER_URL` is unset, empty, or invalid, no GoatCounter script is injected.
+- To enable, set `GOATCOUNTER_URL` to your endpoint, for example: `https://stats.example.com/count`
 - Self-hosters can point this to their own GoatCounter instance URL.

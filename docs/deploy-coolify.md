@@ -46,6 +46,11 @@ Optional Clerk variables for v1 (can be empty):
 - `CLERK_SECRET_KEY=`
 - `CLERK_WEBHOOK_SECRET=`
 
+Optional analytics variable:
+
+- `GOATCOUNTER_URL=` (default empty/disabled)
+- Example enable value: `GOATCOUNTER_URL=https://stats.example.com/count`
+
 ## 6. Health check
 
 The app exposes:

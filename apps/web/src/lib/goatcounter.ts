@@ -4,7 +4,7 @@ export type GoatCounterConfig = {
 };
 
 export function resolveGoatCounterConfig(): GoatCounterConfig | null {
-  const value = process.env.NEXT_PUBLIC_GOATCOUNTER_URL?.trim();
+  const value = process.env.GOATCOUNTER_URL?.trim();
 
   if (!value) {
     return null;
@@ -23,7 +23,7 @@ export function resolveGoatCounterConfig(): GoatCounterConfig | null {
   } catch {
     if (process.env.NODE_ENV === 'development') {
       globalThis.console.warn(
-        'Ignoring invalid NEXT_PUBLIC_GOATCOUNTER_URL: expected a valid http(s) URL.',
+        'Ignoring invalid GOATCOUNTER_URL: expected a valid http(s) URL.',
       );
     }
     return null;
