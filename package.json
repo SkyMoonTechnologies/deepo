@@ -1,0 +1,27 @@
+{
+  "name": "deepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --workspaces dev",
+    "build": "bun run --filter @deepo/web build",
+    "lint": "bun run --workspaces lint",
+    "typecheck": "bun run --workspaces typecheck",
+    "test": "bun run --filter @deepo/tools-core test",
+    "format": "bun run --workspaces format"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531"
+}
